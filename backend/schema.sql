@@ -1,8 +1,0 @@
-DROP TABLE IF EXISTS logs;
-CREATE TABLE logs (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  source_url TEXT,
-  scraped_content TEXT,
-  ai_summary TEXT
-);
