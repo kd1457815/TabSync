@@ -11,3 +11,4 @@ backend/.wrangler/
 
 # Misc
 *.log
+*.toml
