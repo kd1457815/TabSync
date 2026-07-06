@@ -1,0 +1,12 @@
+# TabSync 專案備忘錄 (機密資訊)
+# 這裡可以用來存放您在這個專案中產生的所有 ID、金鑰或專屬網址。
+
+## Cloudflare D1 資料庫
+- Database Name: tabsync_logs
+- Database ID: 5e1510ef-35ff-44ec-b157-e7818d3fdf06
+
+## Cloudflare Worker 後端伺服器
+- Server URL: https://tabsync-backend.eric-intime5298.workers.dev
+
+## 其他金鑰 / 備註
+- 

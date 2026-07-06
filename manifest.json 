@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "TabSync",
+  "version": "1.0",
+  "description": "整理與匯總目前開啟的所有分頁內容",
+  "permissions": ["tabs", "activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "開啟 TabSync"
+  }
+}

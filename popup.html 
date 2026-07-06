@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { width: 300px; padding: 10px; font-family: sans-serif; }
+    button { width: 100%; padding: 10px; margin-bottom: 10px; cursor: pointer; }
+    #tabList { list-style-type: none; padding: 0; margin: 0; font-size: 14px; }
+    #tabList li { margin-bottom: 8px; border-bottom: 1px solid #ccc; padding-bottom: 5px; }
+  </style>
+</head>
+<body>
+  <h3>TabSync 分頁整理</h3>
+  <button id="syncBtn">取得所有分頁</button>
+  <ul id="tabList"></ul>
+  <script src="popup.js"></script>
+</body>
+</html>

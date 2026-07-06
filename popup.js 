@@ -1,0 +1,14 @@
+document.getElementById('syncBtn').addEventListener('click', async () => {
+  const tabListEl = document.getElementById('tabList');
+  tabListEl.innerHTML = '讀取中...';
+
+  // 取得目前視窗的所有分頁
+  chrome.tabs.query({ currentWindow: true }, (tabs) => {
+    tabListEl.innerHTML = ''; // 清空列表
+    tabs.forEach(tab => {
+      const li = document.createElement('li');
+      li.textContent = tab.title; // 顯示分頁標題
+      tabListEl.appendChild(li);
+    });
+  });
+});

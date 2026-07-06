@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TabSync</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="header">
+    <div class="header-icon">✨</div>
+    <h1>TabSync</h1>
+    <p data-i18n="subtitle">您的生產力工具 (Cloudflare AI 版)</p>
+  </div>
+  
+  <div class="main-actions-panel">
+    <div class="lang-selector">
+      <label for="lang-select" data-i18n="langLabel">輸出語言：</label>
+      <select id="lang-select">
+        <option value="日本語">🇯🇵 日本語</option>
+        <option value="繁體中文">🇹🇼 繁體中文</option>
+        <option value="簡體中文">🇨🇳 簡體中文</option>
+        <option value="English">🇺🇸 English</option>
+        <option value="한국어">🇰🇷 한국어</option>
+      </select>
+    </div>
+
+    <div class="custom-prompt-container">
+      <textarea id="custom-prompt" rows="2" data-i18n-placeholder="customPromptPlaceholder" placeholder="自訂 AI 指令 (選填)，例如：請幫我整理成表格..."></textarea>
+    </div>
+
+    <button id="ai-organize-btn" class="primary-btn ai-btn full-width-btn">
+      <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+      <span data-i18n="aiBtn">AI 雲端整理所有分頁</span>
+    </button>
+  </div>
+  
+  <div class="actions bottom-actions">
+    <button id="copy-tabs-btn" class="secondary-btn">
+      <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+      <span data-i18n="copyTabsBtn">複製分頁連結</span>
+    </button>
+    <button id="scrape-btn" class="secondary-btn">
+      <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+      <span data-i18n="scrapeBtn">爬取當前網頁</span>
+    </button>
+  </div>
+
+  <div id="scrape-result" class="hidden slide-down">
+    <div class="result-header">
+      <h3 id="result-title" data-i18n="resultTitleNormal">處理結果</h3>
+      <button id="copy-scrape-btn" class="small-btn" data-i18n="copyContentBtn">複製內容</button>
+    </div>
+    <textarea id="scrape-content" readonly placeholder="準備載入內容..." data-i18n-placeholder="placeholderResult"></textarea>
+  </div>
+
+  <div class="tabs-container">
+    <h3 data-i18n="tabsListTitle">目前開啟的分頁 (<span id="tab-count">0</span>)</h3>
+    <ul id="tabs-list"></ul>
+  </div>
+
+  <script src="i18n.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "TabSync",
+  "version": "1.2",
+  "description": "分頁整理與輔助爬蟲生產力工具 (WebGPU AI 本地版)",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "TabSync"
+  }
+}

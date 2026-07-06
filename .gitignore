@@ -1,0 +1,13 @@
+# Mac OS
+.DS_Store
+
+# Build artifacts
+TabSync_Extension.zip
+
+# Node modules
+node_modules/
+backend/node_modules/
+backend/.wrangler/
+
+# Misc
+*.log
