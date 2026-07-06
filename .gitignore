@@ -16,3 +16,4 @@ backend/
 *.log
 *.toml
 PRD*.md
+*.txt
